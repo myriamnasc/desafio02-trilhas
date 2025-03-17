@@ -5,7 +5,7 @@
 
 const prompt = require('prompt-sync')(); 
 const senhaCorreta = 'felicidade';
-tentativas = 0;
+let tentativas = 0;
 let senha;
 
 do {
@@ -16,7 +16,7 @@ do {
         break;
     } else {
         tentativas++;
-        console.log('Senha incorreta. Tentativas restantes: ' + (3 - tentativas))
+        console.log(`Senha incorreta. Tentativas restantes: ${3 - tentativas}`)
     }
 } while (tentativas < 3);
 
